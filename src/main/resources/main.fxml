@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="601.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sampaio.controller.Controller">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="846.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="180.0" text="TOOLBOX APP" textAlignment="CENTER" textFill="#40cdd7">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXTextField labelFloat="true" layoutX="17.0" layoutY="148.0" onMouseClicked="#selecionaArquivo" prefHeight="25.0" prefWidth="818.0" promptText="Caminho do App" />
+            <JFXListView fx:id="jfxListApps" layoutX="17.0" layoutY="225.0" prefHeight="361.0" prefWidth="818.0">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#removerItem" text="Remover" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></JFXListView>
+            <Label layoutX="389.0" layoutY="205.0" prefHeight="20.0" prefWidth="68.0" text="Aplicativos" textFill="#40cdd7">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
